@@ -1,0 +1,211 @@
+{
+    "Cath Lab": {
+        "Start": "question0",
+        "dialogue1": {
+            "content": [
+                "Okay, thanks",
+                {
+                    "isEnd": true,
+                    "speaking": "Romesh"
+                }
+            ]
+        },
+        "question0": {
+            "content": [
+                "Hi it's Romesh from the cath lab, how can I help?",
+                {
+                    "speaking": "Romesh",
+                    "adapted": "bed_phrases",
+                    "linkPath": "question1"
+                }
+            ]
+        },
+        "question2": {
+            "content": [
+                "Okay how else can I help?",
+                {
+                    "speaking": "Romesh",
+                    "adapted": "bed_phrases",
+                    "linkPath": "question1"
+                }
+            ]
+        },
+        "question1": {
+            "content": [
+                "No problem we'll be down for them, we need you to admit them the the CCU first though. Please fill out there form under the admit tab of the computer system. Is there anybody else you need help with?",
+                {
+                    "speaking": "Romesh"
+                },
+                {
+                    "linkPath": "question2",
+                    "option": "Yes"
+                },
+                {
+                    "linkPath": "dialogue1",
+                    "option": "No"
+                }
+            ]
+        }
+    },
+    "Surgical Reg.": {
+        "Start": "dialogue1",
+        "dialogue1": {
+            "content": [
+                "Hi it's Dr Rachel Simmons the surgical registrar, how can I help you?",
+                {
+                    "divert": "question0",
+                    "speaking": "Romesh"
+                }
+            ]
+        },
+        "question0": {
+            "content": [
+                "Hi Dr Simmons, it's Dr playerSurname in the emergency department. I would appeciate it if you would come see the patient in...",
+                {
+                    "speaking": "Player"
+                },
+                {
+                    "linkPath": "question1",
+                    "option": "Bed 1"
+                },
+                {
+                    "linkPath": "question1",
+                    "option": "Bed 2"
+                },
+                {
+                    "linkPath": "question1",
+                    "option": "Bed 3"
+                },
+                {
+                    "linkPath": "question1",
+                    "option": "Bed 4"
+                },
+                {
+                    "linkPath": "question1",
+                    "option": "Bed 5"
+                },
+                {
+                    "linkPath": "question1",
+                    "option": "Bed 6"
+                },
+                {
+                    "linkPath": "question1",
+                    "option": "Bed 7"
+                },
+                {
+                    "linkPath": "question1",
+                    "option": "Bed 8"
+                },
+                {
+                    "linkPath": "question1",
+                    "option": "Bed 9"
+                },
+                {
+                    "linkPath": "question1",
+                    "option": "Bed 10"
+                }
+            ]
+        },
+        "question2": {
+            "content": [
+                "No problem, what appears to be the problem with the patient.",
+                {
+                    "speaking": "Dr Simmons"
+                },
+                {
+                    "linkPath": "question1",
+                    "option": "Suspected appendicitis"
+                },
+                {
+                    "linkPath": "question1",
+                    "option": "Suspected volvulus"
+                },
+                {
+                    "linkPath": "question1",
+                    "option": "Suspected bowel obstruction."
+                },
+                {
+                    "linkPath": "question1",
+                    "option": "Suspected Cholelithiasis."
+                }
+            ]
+        },
+        "question1": {
+            "content": [
+                "No problem I will be down to see them as soon as I am able. Is there anybody else you need help with?",
+                {
+                    "speaking": "Dr Simmons"
+                },
+                {
+                    "linkPath": "question3",
+                    "option": "Yes"
+                },
+                {
+                    "linkPath": "dialogue2",
+                    "option": "No"
+                }
+            ]
+        },
+        "question3": {
+            "content": [
+                "I would also appreciate it if you would come see the patient in...",
+                {
+                    "speaking": "Player"
+                },
+                {
+                    "linkPath": "question1",
+                    "option": "Bed 1"
+                },
+                {
+                    "linkPath": "question1",
+                    "option": "Bed 2"
+                },
+                {
+                    "linkPath": "question1",
+                    "option": "Bed 3"
+                },
+                {
+                    "linkPath": "question1",
+                    "option": "Bed 4"
+                },
+                {
+                    "linkPath": "question1",
+                    "option": "Bed 5"
+                },
+                {
+                    "linkPath": "question1",
+                    "option": "Bed 6"
+                },
+                {
+                    "linkPath": "question1",
+                    "option": "Bed 7"
+                },
+                {
+                    "linkPath": "question1",
+                    "option": "Bed 8"
+                },
+                {
+                    "linkPath": "question1",
+                    "option": "Bed 9"
+                },
+                {
+                    "linkPath": "question1",
+                    "option": "Bed 10"
+                },
+                {
+                    "linkPath": "dialogue2",
+                    "option": "... actually, I think that was all I needed help with."
+                }
+            ]
+        },
+        "dialogue2": {
+            "content": [
+                "Okay great thanks Dr playerSurname.",
+                {
+                    "isEnd": true,
+                    "speaking": "Romesh"
+                }
+            ]
+        }
+    }
+}

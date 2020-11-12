@@ -1,0 +1,666 @@
+{
+    "Templates": ["SOCRATES", "Cardiovascular", "Respiratory", "Gastroenterology", "Surgical", "General History", "Depression", "Psychiatry", "Neurology", "Headache", "Infection", "Oncology", "Dermatology"],
+    "Questions": {
+        "Do you have a cough?": {
+            "Response": "Nope I haven't got a cough.",
+            "Tags": ["cough", "respiratory"],
+            "Templates": ["Respiratory"]
+        },
+        "Is there any sputum?": {
+            "Response": "No doc, I don't have any sputum.",
+            "Tags": ["sputum", "respiratory", "cough"],
+            "Templates": ["Respiratory"]
+        },
+        "Are you coughing up any blood?": {
+            "Response": "No, I'm not coughing up any blood.",
+            "Tags": ["cough", "respiratory", "blood"],
+            "Templates": ["Respiratory"]
+        },
+        "How is your breathing?": {
+            "Response": "It's fine, I haven't had any problems with it.",
+            "Tags": ["breathing", "respiratory"],
+            "Templates": ["Respiratory"]
+        },
+        "Do you have any chest pain?": {
+            "Response": "No I'm fine actually. No pain in my chest.",
+            "Tags": ["pain", "chest", "cardiovascular", "cardio", "heart"],
+            "Templates": ["Cardiovascular"]
+        },
+        "Do you have any pain?": {
+            "Response": "No I'm not in any pain at all.",
+            "Tags": ["pain", "hurt", "ache"],
+            "Templates": ["Cardiovascular"]
+        },
+        "Do you have any pain in your abdomen?": {
+            "Response": "Sorry, what do you mean by my abdomen?",
+            "Tags": ["pain", "abdomen", "gastroenterology", "gastro"],
+            "Templates": ["Gastroenterology", "Surgical"]
+        },
+        "Do you have any pain in your stomach?": {
+            "Response": "No, there's no pain in my stomach.",
+            "Tags": ["pain", "abdomen", "gastroenterology", "gastro"],
+            "Templates": ["Gastroenterology", "Surgical"]
+        },
+        "Do you have any past medical conditions?": {
+            "Response": "No, I'm very healthy. I barely ever have to see my doctor.",
+            "Tags": ["past", "medical", "conditions", "medical conditions"],
+            "Templates": ["General History"]
+        },
+        "What is the pain like?": {
+            "Response": "I don't have any pain Dr [playerSurname]",
+            "Tags": ["pain", "ache"],
+            "Templates": [
+                "SOCRATES"
+            ]
+        },
+        "Where is the pain?": {
+            "Response": "What do you mean? I don't have any pain.",
+            "Tags": ["pain", "ache"],
+            "Templates": [
+                "SOCRATES"
+            ]
+        },
+        "When did the pain start?": {
+            "Response": "I haven't had any pain so far.",
+            "Tags": ["pain", "ache"],
+            "Templates": [
+                "SOCRATES"
+            ]
+        },
+        "Does the pain radiate anywhere?": {
+            "Response": "No, I have no pain, so it's not going to radiate anywhere?",
+            "Tags": ["pain", "ache"],
+            "Templates": [
+                "SOCRATES"
+            ]
+        },
+        "Does the pain come and go?": {
+            "Response": "No I haven't had any pain so it's not going to come and go.",
+            "Tags": ["pain", "ache"],
+            "Templates": [
+                "SOCRATES"
+            ]
+        },
+        "How bad is the pain.": {
+            "Response": "I don't have any pain. So, erm, not bad at all?",
+            "Tags": ["pain", "ache"],
+            "Templates": [
+                "SOCRATES"
+            ]
+        },
+        "Have you had any other symptoms?": {
+            "Response": "No I haven't had any other symptoms.",
+            "Tags": ["pain", "ache", "symptoms"],
+            "Templates": [
+                "SOCRATES"
+            ]
+        },
+        "Have you ever had any surgery?": {
+            "Response": "No, I've never had to have any surgery.",
+            "Tags": ["surgery"],
+            "Templates": ["General History", "Surgical"]
+        },
+        "Why are you not feeling very well?": {
+            "Response": "I'm just not feeling very well.",
+            "Tags": ["unwell", "ill", "why", "general"],
+            "Templates": ["General History"]
+        },
+        "Have you vomited?": {
+            "Response": "No, I haven't vomited at all.",
+            "Tags": ["vomit", "sick", "diarrhoea"],
+            "Templates": ["Gastroenterology"]
+        },
+        "Have you had any diarrhoea?": {
+            "Response": "No, I've been going to the toilet normally.",
+            "Tags": ["vomit", "sick", "diarrhoea"],
+            "Templates": ["Gastroenterology"]
+        },
+        "Do you feel tired?": {
+            "Response": "No I haven't been feeling tired at all.",
+            "Tags": ["exhausted", "shattered", "depressed", "depression"],
+            "Templates": ["Depression"]
+        },
+        "Do you have a headache?": {
+            "Response": "No, I don't have a headache.",
+            "Tags": ["neurology", "vision", "pituitary"],
+            "Templates": ["Neurology", "Headache"]
+        },
+        "Did you have symptoms before the headache?": {
+            "Response": "I haven't got a headache doctor?",
+            "Tags": ["neurology", "vision", "pituitary"],
+            "Templates": ["Neurology", "Headache"]
+        },
+        "Do you feel depressed?": {
+            "Response": "No, I don't feel depressed at all.",
+            "Tags": ["depression"],
+            "Templates": ["Psychiatry", "Depression"]
+        },
+        "Do you feel anxious?": {
+            "Response": "No, I'm definitely not anxious.",
+            "Tags": ["anxiety", "depression"],
+            "Templates": ["Psychiatry", "Depression"]
+        },
+        "Do you feel nauseous?": {
+            "Response": "No, I haven't had any nausea at all.",
+            "Tags": ["sick", "vomit", "vomiting"],
+            "Templates": ["Gastroenterology", "Surgical"]
+        },
+        "Do you have a fever?": {
+            "Response": "No, I haven't had a fever.",
+            "Tags": ["hot", "temperature", "infection"],
+            "Templates": ["Infection"]
+        },
+        "Are you short of breath?": {
+            "Response": "No, my breathing is completely fine.",
+            "Tags": ["cold", "chest", "lung", "pneumonia", "infection"],
+            "Templates": ["Infection", "Cardiovascular", "Respiratory"]
+        },
+        "Have you felt dizzy?": {
+            "Response": "No, I haven't had any dizziness.",
+            "Tags": ["unbalanced", "balance", "headache"],
+            "Templates": ["Neurology"]
+        },
+        "Have you had any weight loss?": {
+            "Response": "Chance would be a fine thing. No, I've lost none.",
+            "Tags": ["oncology", "cancer", "heamatology"],
+            "Templates": ["Oncology"]
+        },
+        "Do you have a rash?": {
+            "Response": "No, I haven't noticed any rash anywhere.",
+            "Tags": ["dermatology", "skin", "rashes", "itch", "pruritis"],
+            "Templates": ["Dermatology"]
+        },
+        "Have you been constipated?": {
+            "Response": "No, I've been going to the toilet regularly.",
+            "Tags": ["poo", "tummy", "gaastroenteritis", "blockage", "toilet"],
+            "Templates": ["Gastroenterology"]
+        },
+        "Are you stressed?": {
+            "Response": "No, I'm not stressed. I'm quite a relaxed person if I'm honest.",
+            "Tags": ["stress", "anxiety", "depression"],
+            "Templates": ["Psychiatry", "Depression"]
+        },
+        "Do you feel irritable?": {
+            "Response": "No, I'm not irritable. I'm really rather friendly.",
+            "Tags": ["stress", "anxiety", "depression"],
+            "Templates": ["Psychiatry", "Depression"]
+        },
+        "Are you itchy?": {
+            "Response": "No, I'm not itchy at all.",
+            "Tags": ["pruritis", "rash"],
+            "Templates": ["Dermatology"]
+        },
+        "Do you have any allergies?": {
+            "Response": "Nope, I don't have any allergies to anything. Not that I know of anyway.",
+            "Tags": [],
+            "Templates": null
+        },
+        "Are you numb?": {
+            "Response": "Nope, I don't feel numb at all.",
+            "Tags": [],
+            "Templates": null
+        },
+        "Do you feel confused?": {
+            "Response": "What do you mean confused? I am not at all confused.",
+            "Tags": [],
+            "Templates": null
+        },
+        "Do you have any pain in your joints?": {
+            "Response": "Nope, all my joints are working fine thanks.",
+            "Tags": [],
+            "Templates": null
+        },
+        "Have you had any loss of sensation?": {
+            "Response": "Nope, I can feel everything. Nothing to worry about there.",
+            "Tags": [],
+            "Templates": null
+        },
+        "Do you have any pain in your muscles?": {
+            "Response": "No, my muscles feel fine.",
+            "Tags": [],
+            "Templates": null
+        },
+        "Are you afraid?": {
+            "Response": "Why would I be afraid. No, there's nothing to worry about doctors.",
+            "Tags": [],
+            "Templates": null
+        },
+        "Do you have hypertension?": {
+            "Response": "What is hypertension?",
+            "Tags": [],
+            "Templates": null
+        },
+        "Do you have high blood pressure?": {
+            "Response": "No, it has always been fine when the doctor takes it.",
+            "Tags": [],
+            "Templates": null
+        },
+        "Have you had any hair loss?": {
+            "Response": "No, I haven't lost any hair. Certainly not that I've noticed.",
+            "Tags": [],
+            "Templates": null
+        },
+        "Do you feel bloated?": {
+            "Response": "No, I've not had any problems with bloating",
+            "Tags": [],
+            "Templates": null
+        },
+        "Have you ever had a heart attack?": {
+            "Response": "Oh my goodness no. Thank goodness.",
+            "Tags": [],
+            "Templates": null
+        },
+        "Have you ever had this before?": {
+            "Response": "No, I've never had anything like this before.",
+            "Tags": [],
+            "Templates": null
+        },
+        "Do you suffer from migraines?": {
+            "Response": "No, I don't suffer from anything like that.",
+            "Tags": [],
+            "Templates": null
+        },
+        "Do you have a sore throat?": {
+            "Response": "No, my throat is completely fine.",
+            "Tags": [],
+            "Templates": null
+        },
+        "Have you ever had a myocardial infarction?": {
+            "Response": "I'm sorry Dr [playerSurname], I have no idea what that is.",
+            "Tags": [],
+            "Templates": null
+        },
+        "Have you lost your appetite?": {
+            "Response": "Nope, my appetite is completely normal.",
+            "Tags": [],
+            "Templates": null
+        },
+        "Have you noticed any bleeding?": {
+            "Response": "No, I haven't had any bleeding from anywhere. I'd definitely have noticed.",
+            "Tags": [],
+            "Templates": null
+        },
+        "Is there anything in your stool?": {
+            "Response": "No, I haven't had any bleeding from anywhere. I'd definitely have noticed.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Is there any blood in your stool?": {
+            "Response": "No, there is no blood in the stool.",
+            "Tags": null,
+            "Templates": null
+        },
+        "What does your stool look like?": {
+            "Response": "It looks normal to be honest with you. I haven't noticed any changes.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Have you ever been anaemic?": {
+            "Response": "No, as far as I'm aware, I've never been anaemic.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Have you got arthritis?": {
+            "Response": "No, I've never been diagnosed with arthritis.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Do you suffer with panic attacks?": {
+            "Response": "No, I'm a very relaxed person to be honest.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Do you have any back pain?": {
+            "Response": "No, I don't have any back pain.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Do you have any memory loss?": {
+            "Response": "No, my memory is completely fine.",
+            "Tags": null,
+            "Templates": null
+        },
+        "No, I haven't noticed anything like that.": {
+            "Response": "No, my memory is completely fine.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Do you take any medications?": {
+            "Response": "No, I am not on any medication.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Do you take any recreational drugs?": {
+            "Response": "No, I certainly do not.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Do you have any family history of any medical conditions?": {
+            "Response": "No, all my family is very healthy. There is certainly no medical conditions that run in the family.",
+            "Tags": null,
+            "Templates": null
+        },
+        "What is you living situation?": {
+            "Response": "I live on my own in a house. It's not too far away from here.",
+            "Tags": null,
+            "Templates": null
+        },
+        "What was the address I told you?": {
+            "Response": "42 west registrar street.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Does your house have stairs?": {
+            "Response": "Yes, it's a two storey house. But I can manage that fine if that is what you were getting at.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Are you afraid of anybody at home?": {
+            "Response": "Oh my goodness no. My family is lovely. I assure you there is nothing going on like that.",
+            "Tags": null,
+            "Templates": null
+        },
+        "What do you do for a living?": {
+            "Response": "I am a [patientJob].",
+            "Tags": null,
+            "Templates": null
+        },
+        "Do you smoke?": {
+            "Response": "No, I don't smoke.",
+            "Tags": null,
+            "Templates": null
+        },
+        "How much do you smoke?": {
+            "Response": "I don't smoke.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Do you drink alcohol?": {
+            "Response": "No, I don't drink any alcohol.",
+            "Tags": null,
+            "Templates": null
+        },
+        "How much alcohol do you drink?": {
+            "Response": "I don't drink any alcohol.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Have you travelled anywhere?": {
+            "Response": "No, I haven't left pixel island for about 4 years now.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Is there anything that you are worried about?": {
+            "Response": "No, I'm not worried Dr [playerSurname], just want to go home when I can.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Can you tell me more about that?": {
+            "Response": "No not really.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Have you had any problems swallowing?": {
+            "Response": "No I haven't had any problems swallowing.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Have you had any pain when swallowing?": {
+            "Response": "No I haven't had any pain when swallowing.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Have you noticed any yellowing of your skin?": {
+            "Response": "My skin looks normal I think. Definitely not yellow.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Have you ever had anything like this before?": {
+            "Response": "No, this is the first time anything like this has happened.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Do you have any children?": {
+            "Response": "No, none yet.",
+            "Tags": null,
+            "Templates": null
+        },
+        "When did this start?": {
+            "Response": "Erh, I'm not sure when it started actually.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Does anything make the pain better?": {
+            "Response": "Hmm well I don't really have any pain, so there isn't anything needed to make the pain better.",
+            "Tags": null,
+            "Templates": [
+                "SOCRATES"
+            ]
+        },
+        "Have you had any problems with your stomach before?": {
+            "Response": "No, I haven't had any problems with my stomach before.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Do you have any ideas?": {
+            "Response": "No not really, I'll leave that up to you. Wouldn't be much of a game if I gave you the answer would it.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Have you been passing urine?": {
+            "Response": "Yeah I've been passing urine normally.",
+            "Tags": null,
+            "Templates": null
+        },
+        "When did you last go for a wee?": {
+            "Response": "For a wee? Quite recently I think.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Have you had any palpitations?": {
+            "Response": "No, I haven't noticed any palpitations.",
+            "Tags": null,
+            "Templates": null
+        },
+        "What do you mean by palpitations?": {
+            "Response": "I'm not having any palpitations, so I don't know what you're talking about.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Have you ever had your appendix removed?": {
+            "Response": "No, I've still got my appendix.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Do you have asthma?": {
+            "Response": "No, I don't have asthma.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Do you have any concerns?": {
+            "Response": "No theres nothing I'm that concerned about.",
+            "Tags": null,
+            "Templates": null
+        },
+        "What is the time?": {
+            "Response": "It is [currentTime].",
+            "Tags": null,
+            "Templates": null
+        },
+        "I'm going to tell you an address. 42 west register street. Can you remember that for me.": {
+            "Response": "Yeah, okay, no problem.",
+            "Tags": null,
+            "Templates": null
+        },
+        "What is the current year.": {
+            "Response": "It's [currentYear]",
+            "Tags": null,
+            "Templates": null
+        },
+        "Do you know where you are?": {
+            "Response": "Yes, I'm in the pixel hospital.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Do you know who I am?": {
+            "Response": "Yeah you're the doctor.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Can you tell me who that is?": {
+            "Response": "Yeah that's the nurse.",
+            "Tags": null,
+            "Templates": null
+        },
+        "When was the first world war?": {
+            "Response": "1914 to 1918",
+            "Tags": null,
+            "Templates": null
+        },
+        "What's the name for the current monarch?": {
+            "Response": "Queen Elizabeth",
+            "Tags": null,
+            "Templates": null
+        },
+        "Can you count down from 20?": {
+            "Response": "Yeah. 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1.",
+            "Tags": null,
+            "Templates": null
+        },
+        "How often do you urinate?": {
+            "Response": "A normal amount.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Do you have problems weeing?": {
+            "Response": "No, I don't have any problems weeing.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Is it painful when you wee?": {
+            "Response": "No it's not painful when I wee.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Do you ever wet yourself?": {
+            "Response": "No I always make it to the toilet.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Is there any blood in your urine?": {
+            "Response": "No, there isn't any blood in my urine.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Do you need to go the the toilet at night?": {
+            "Response": "No I never get up to go to the toilet at night.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Is it difficult for you to pass urine?": {
+            "Response": "No it's easy for me to go to the toilet, never had any problem actually going for a wee.",
+            "Tags": null,
+            "Templates": null
+        },
+        "When did you last go to the toilet.": {
+            "Response": "Hmm, I would say around about 3/4 hours ago.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Do you ever have any dribbling after you go for a wee?": {
+            "Response": "No, I don't have any problems like that usually.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Have you ever been catheterised?": {
+            "Response": "No, I haven't ever had a catheter put in before.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Is the pain worse when you lean forward?": {
+            "Response": "What do you mean? I haven't got any pain at the moment?",
+            "Tags": null,
+            "Templates": null
+        },
+        "Have you taken anything for the pain?": {
+            "Response": "No I haven't taken anything.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Have you had any changes in your bowel habit?": {
+            "Response": "No, my bowels have been fine.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Have you had any neck stiffness?": {
+            "Response": "No I haven't had any neck stiffness.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Have you noticed any visual disturbance?": {
+            "Response": "No I haven't noticed any visual disturbance.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Have you had any sleep disturbance?": {
+            "Response": "My sleeping has been fine.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Have you noticed any weakness?": {
+            "Response": "No, I haven't noticed any weakness.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Have you had any recent trauma?": {
+            "Response": "Hmm, no, I haven't had any recent trauma. ",
+            "Tags": null,
+            "Templates": null
+        },
+        "Are you pregnant?": {
+            "Response": "No, no chance of me being pregnant.",
+            "Tags": null,
+            "Templates": null
+        },
+        "When did you last have intercourse?": {
+            "Response": "I can't remember doctor. Not for a long time. But we used condoms anyway.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Are you eating and drinking?": {
+            "Response": "Yes I am eating and drinking normally",
+            "Tags": null,
+            "Templates": null
+        },
+        "How is your diet?": {
+            "Response": "My diet is good I think. I try to eat 5 a day. I try and keep things as balanced as possible.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Who do you live with?": {
+            "Response": "I live by myself.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Are you having trouble swallowing solids and liquids?": {
+            "Response": "No, I am not having any trouble swallowing.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Does your skin feel tight?": {
+            "Response": "No, my skin doesn't feel tight. I moisturise.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Do your hands get very cold when outside?": {
+            "Response": "No, my hands are fine usually.",
+            "Tags": null,
+            "Templates": null
+        },
+        "Have you noticed any changed in your skin?": {
+            "Response": "No my skin is completely fine.",
+            "Tags": null,
+            "Templates": null
+        }
+    }
+}

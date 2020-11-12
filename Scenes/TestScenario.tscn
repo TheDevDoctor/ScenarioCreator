@@ -1,0 +1,775 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://Scripts/TestScenario.gd" type="Script" id=1]
+[ext_resource path="res://Graphics/RectangleBg.png" type="Texture" id=2]
+[ext_resource path="res://Fonts/Nunito_extra_bold20.font" type="BitmapFont" id=3]
+[ext_resource path="res://Graphics/baseDataContainer.png" type="Texture" id=4]
+[ext_resource path="res://Graphics/Lock.png" type="Texture" id=5]
+[ext_resource path="res://Fonts/Nunito_regular36.font" type="BitmapFont" id=6]
+[ext_resource path="res://Themes/subscreens.tres" type="Theme" id=7]
+[ext_resource path="res://Scenes/Simulator.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Graphics/blankPixel.png" type="Texture" id=9]
+[ext_resource path="res://Graphics/innerShadowTop.png" type="Texture" id=10]
+[ext_resource path="res://Fonts/Nunito_regular16.font" type="BitmapFont" id=11]
+[ext_resource path="res://Graphics/BottomButtonLeft.png" type="Texture" id=12]
+[ext_resource path="res://Graphics/BottomButtonRight.png" type="Texture" id=13]
+
+[sub_resource type="StyleBoxFlat" id=1]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.278397, 0.715078, 0.800781, 0.602196 )
+draw_center = true
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.20874, 0.717182, 0.742188, 0.558 )
+border_blend = false
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Border", "Border Width", "Corner Radius" ]
+
+[sub_resource type="StyleBoxFlat" id=2]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.421875, 0.905151, 1, 0.602196 )
+draw_center = true
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.597473, 0.962516, 0.980469, 0.558 )
+border_blend = false
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Border", "Border Width", "Corner Radius" ]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+
+[sub_resource type="StyleBoxFlat" id=4]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.289062, 0.289062, 0.289062, 0.602196 )
+draw_center = true
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.382812, 0.382812, 0.382812, 0.558 )
+border_blend = false
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Border", "Border Width", "Corner Radius" ]
+
+[sub_resource type="StyleBoxFlat" id=5]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.135956, 0.481478, 0.527344, 0.430941 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Corner Radius" ]
+
+[sub_resource type="Animation" id=6]
+
+length = 1.2
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1280, 0 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+
+length = 1.2
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -1280, 0 ) ]
+}
+
+[sub_resource type="StyleBoxTexture" id=8]
+
+content_margin_left = -1.0
+content_margin_right = 20.0
+content_margin_top = 10.0
+content_margin_bottom = -1.0
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 330, 62 )
+margin_left = 10.0
+margin_right = 5.0
+margin_top = 5.0
+margin_bottom = 10.0
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+modulate_color = Color( 0.0541992, 0.219473, 0.375, 1 )
+draw_center = true
+_sections_unfolded = [ "Content Margin", "Margin", "Modulate" ]
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+
+[sub_resource type="StyleBoxTexture" id=10]
+
+content_margin_left = -1.0
+content_margin_right = 20.0
+content_margin_top = 10.0
+content_margin_bottom = -1.0
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 330, 62 )
+margin_left = 10.0
+margin_right = 5.0
+margin_top = 5.0
+margin_bottom = 10.0
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+modulate_color = Color( 0.0521851, 0.255051, 0.445312, 1 )
+draw_center = true
+_sections_unfolded = [ "Content Margin", "Expand Margin", "Margin", "Modulate" ]
+
+[sub_resource type="StyleBoxTexture" id=11]
+
+content_margin_left = -1.0
+content_margin_right = 20.0
+content_margin_top = 10.0
+content_margin_bottom = -1.0
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 330, 62 )
+margin_left = 5.0
+margin_right = 10.0
+margin_top = 5.0
+margin_bottom = 10.0
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+modulate_color = Color( 0.0541992, 0.219473, 0.375, 1 )
+draw_center = true
+_sections_unfolded = [ "Margin", "Modulate" ]
+
+[sub_resource type="StyleBoxTexture" id=12]
+
+content_margin_left = -1.0
+content_margin_right = 20.0
+content_margin_top = 10.0
+content_margin_bottom = -1.0
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 330, 62 )
+margin_left = 5.0
+margin_right = 10.0
+margin_top = 5.0
+margin_bottom = 10.0
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+modulate_color = Color( 0.0521851, 0.255051, 0.445312, 1 )
+draw_center = true
+_sections_unfolded = [ "Content Margin", "Margin", "Modulate" ]
+
+[node name="TestScreen" type="Container"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Mouse", "Rect", "Size Flags" ]
+
+[node name="ScenarioDetails" type="NinePatchRect" parent="."]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 100.0
+margin_top = 60.0
+margin_right = -100.0
+margin_bottom = -110.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+_sections_unfolded = [ "Margin", "Mouse", "Patch Margin", "Rect" ]
+
+[node name="Label" type="Label" parent="ScenarioDetails"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 16.0
+margin_top = 15.0
+margin_right = 169.0
+margin_bottom = 36.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.843872, 0.936555, 0.96875, 0.712706 )
+text = "Test"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ScenarioDetails"]
+
+editor/display_folded = true
+self_modulate = Color( 0.160767, 0.160767, 0.160767, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 40.0
+margin_top = 33.0
+margin_right = -40.0
+margin_bottom = -55.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 4 )
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+_sections_unfolded = [ "Margin", "Patch Margin", "Visibility" ]
+
+[node name="TextureRect" type="TextureRect" parent="ScenarioDetails/NinePatchRect"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -90.0
+margin_top = -155.0
+margin_right = 86.0
+margin_bottom = 56.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 5 )
+stretch_mode = 0
+
+[node name="NotDone" type="Label" parent="ScenarioDetails/NinePatchRect"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -260.0
+margin_top = 100.0
+margin_right = 270.0
+margin_bottom = 177.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.398438, 0.398438, 0.398438, 1 )
+text = "You have not completed enough of the scenario to test yet."
+align = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="Congrats" type="Label" parent="ScenarioDetails/NinePatchRect"]
+
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -260.0
+margin_top = -175.0
+margin_right = 270.0
+margin_bottom = -98.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.398438, 0.398438, 0.398438, 1 )
+text = "Congratulations on completing your scenario"
+align = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="Buttons" type="VBoxContainer" parent="ScenarioDetails/NinePatchRect"]
+
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -240.0
+margin_top = -55.0
+margin_right = 240.0
+margin_bottom = 145.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Test" type="Button" parent="ScenarioDetails/NinePatchRect/Buttons"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 480.0
+margin_bottom = 98.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 3
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.496094, 0.496094, 0.496094, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "Test your scenario"
+flat = false
+_sections_unfolded = [ "Size Flags", "custom_fonts", "custom_styles" ]
+
+[node name="Send" type="Button" parent="ScenarioDetails/NinePatchRect/Buttons"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 102.0
+margin_right = 480.0
+margin_bottom = 200.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 3
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.496094, 0.496094, 0.496094, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "Send to PixelDr"
+flat = false
+_sections_unfolded = [ "Size Flags", "custom_fonts", "custom_styles" ]
+
+[node name="ViewportContainer" type="ViewportContainer" parent="ScenarioDetails"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 49.0
+margin_top = 33.0
+margin_right = -51.0
+margin_bottom = -55.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 7 )
+stretch = true
+stretch_shrink = 1
+_sections_unfolded = [ "Margin", "Mouse", "Rect", "Theme" ]
+
+[node name="Viewport" type="Viewport" parent="ScenarioDetails/ViewportContainer"]
+
+arvr = false
+size = Vector2( 980, 462 )
+own_world = false
+world = null
+transparent_bg = true
+msaa = 0
+hdr = false
+disable_3d = false
+usage = 2
+debug_draw = 0
+render_target_v_flip = false
+render_target_clear_mode = 0
+render_target_update_mode = 0
+audio_listener_enable_2d = false
+audio_listener_enable_3d = false
+physics_object_picking = false
+gui_disable_input = false
+gui_snap_controls_to_pixels = true
+shadow_atlas_size = 0
+shadow_atlas_quad_0 = 2
+shadow_atlas_quad_1 = 2
+shadow_atlas_quad_2 = 3
+shadow_atlas_quad_3 = 4
+
+[node name="World" parent="ScenarioDetails/ViewportContainer/Viewport" instance=ExtResource( 8 )]
+
+[node name="EndTest" type="Button" parent="ScenarioDetails"]
+
+visible = false
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -114.0
+margin_top = -42.0
+margin_right = 113.0
+margin_bottom = -15.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_styles/normal = SubResource( 5 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "End Test"
+flat = false
+_sections_unfolded = [ "custom_styles" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+root_node = NodePath("..")
+anims/FlyIn = SubResource( 6 )
+anims/FlyOut = SubResource( 7 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="Cover" type="NinePatchRect" parent="."]
+
+visible = false
+self_modulate = Color( 0.335938, 0.335938, 0.335938, 0.491726 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Mouse", "Visibility" ]
+
+[node name="SendScenarioPanel" type="NinePatchRect" parent="."]
+
+editor/display_folded = true
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -295.0
+margin_top = -139.0
+margin_right = 294.0
+margin_bottom = 84.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+_sections_unfolded = [ "Patch Margin" ]
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="SendScenarioPanel"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 40.0
+margin_right = -4.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 10 )
+patch_margin_top = 20
+_sections_unfolded = [ "Patch Margin" ]
+
+[node name="Scenario Title" type="Label" parent="SendScenarioPanel"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 12.0
+margin_top = 11.0
+margin_right = 138.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.131378, 0.74, 0.82, 0.65 )
+text = "Scenario Title"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Visibility", "custom_colors", "custom_fonts" ]
+
+[node name="Label2" type="Label" parent="SendScenarioPanel"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = 54.0
+margin_right = -20.0
+margin_bottom = -78.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 11 )
+custom_colors/font_color = Color( 0, 0.815319, 0.925781, 0.74 )
+text = "Choose the title of your scenario. You cannot use a scenario name that you have before. We suggest you think of a unique title if you would like your scenario to stand out. Ensure you are happy with your scenario as once you send to PixelDr it will be deleted from your scenario builder."
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Margin", "custom_colors", "custom_fonts" ]
+
+[node name="Name" type="LineEdit" parent="SendScenarioPanel"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = 140.0
+margin_right = -20.0
+margin_bottom = -56.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 11 )
+focus_mode = 2
+placeholder_text = "Name..."
+placeholder_alpha = 0.6
+caret_blink = false
+caret_blink_speed = 0.65
+context_menu_enabled = true
+_sections_unfolded = [ "Margin", "Placeholder", "custom_fonts" ]
+
+[node name="Buttons" type="HBoxContainer" parent="SendScenarioPanel"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = -45.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 0
+alignment = 0
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="Cancel" type="Button" parent="SendScenarioPanel/Buttons"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 290.0
+margin_bottom = 41.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_styles/hover = SubResource( 8 )
+custom_styles/focus = SubResource( 9 )
+custom_styles/normal = SubResource( 10 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.160034, 0.400611, 0.59375, 1 )
+custom_colors/font_color_hover = Color( 0.992188, 0.992188, 0.992188, 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Cancel"
+flat = false
+_sections_unfolded = [ "custom_colors", "custom_styles" ]
+
+[node name="Send" type="Button" parent="SendScenarioPanel/Buttons"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 290.0
+margin_right = 581.0
+margin_bottom = 41.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_styles/hover = SubResource( 11 )
+custom_styles/focus = SubResource( 9 )
+custom_styles/normal = SubResource( 12 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.156863, 0.4, 0.592157, 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Send"
+flat = false
+_sections_unfolded = [ "custom_colors", "custom_fonts", "custom_styles" ]
+
+

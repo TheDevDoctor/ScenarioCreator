@@ -1,0 +1,1344 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/Details.gd" type="Script" id=1]
+[ext_resource path="res://Graphics/RectangleBg.png" type="Texture" id=2]
+[ext_resource path="res://Fonts/Nunito_extra_bold20.font" type="BitmapFont" id=3]
+[ext_resource path="res://Graphics/beds.png" type="Texture" id=4]
+[ext_resource path="res://Graphics/INormal.png" type="Texture" id=5]
+
+[sub_resource type="StyleBoxFlat" id=1]
+
+content_margin_left = 5.0
+content_margin_right = 5.0
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color( 0.227936, 0.391397, 0.601562, 1 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Border Width", "Content Margin", "Corner Radius" ]
+
+[sub_resource type="Animation" id=2]
+
+length = 1.2
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1263, 0 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+
+length = 1.2
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -1278, 0 ) ]
+}
+
+[node name="Details" type="Container"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Mouse", "Rect", "Theme" ]
+
+[node name="ScenarioDetails" type="NinePatchRect" parent="."]
+
+editor/display_folded = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -541.0
+margin_top = -218.0
+margin_right = -291.0
+margin_bottom = -39.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+_sections_unfolded = [ "Patch Margin" ]
+
+[node name="Label" type="Label" parent="ScenarioDetails"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 16.0
+margin_top = 15.0
+margin_right = 169.0
+margin_bottom = 36.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.843872, 0.936555, 0.96875, 0.712706 )
+text = "Scenario Details"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScenarioDetails"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 16.0
+margin_top = 48.0
+margin_right = 213.0
+margin_bottom = 148.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 14
+alignment = 0
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="Specialty" type="OptionButton" parent="ScenarioDetails/VBoxContainer"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 197.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 0, 24 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_styles/normal = SubResource( 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+selected = -1
+items = [  ]
+_sections_unfolded = [ "Grow Direction", "Rect", "Visibility", "custom_styles" ]
+
+[node name="Label" type="Label" parent="ScenarioDetails/VBoxContainer/Specialty"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.0
+margin_top = 2.0
+margin_right = -21.0
+margin_bottom = -1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_colors/font_color = Color( 0.843137, 0.933333, 0.968627, 0.407843 )
+text = "Specialty"
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors" ]
+
+[node name="Difficulty" type="OptionButton" parent="ScenarioDetails/VBoxContainer"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 38.0
+margin_right = 197.0
+margin_bottom = 62.0
+rect_min_size = Vector2( 0, 24 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_styles/normal = SubResource( 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+selected = -1
+items = [  ]
+_sections_unfolded = [ "Grow Direction", "Rect", "Visibility", "custom_styles" ]
+
+[node name="Label" type="Label" parent="ScenarioDetails/VBoxContainer/Difficulty"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.0
+margin_top = 2.0
+margin_right = -21.0
+margin_bottom = -1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_colors/font_color = Color( 0.843137, 0.933333, 0.968627, 0.407843 )
+text = "Difficulty"
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Visibility", "custom_colors", "custom_fonts" ]
+
+[node name="Priority" type="OptionButton" parent="ScenarioDetails/VBoxContainer"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 76.0
+margin_right = 197.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 24 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_styles/normal = SubResource( 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+selected = -1
+items = [  ]
+_sections_unfolded = [ "Grow Direction", "Rect", "Visibility", "custom_styles" ]
+
+[node name="Label" type="Label" parent="ScenarioDetails/VBoxContainer/Priority"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.0
+margin_top = 2.0
+margin_right = -21.0
+margin_bottom = -1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_colors/font_color = Color( 0.843137, 0.933333, 0.968627, 0.407843 )
+text = "Priority"
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Visibility", "custom_colors", "custom_fonts" ]
+
+[node name="WebsiteInfo" type="NinePatchRect" parent="."]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -541.0
+margin_top = -24.0
+margin_right = -291.0
+margin_bottom = 175.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+_sections_unfolded = [ "Patch Margin" ]
+
+[node name="Label" type="Label" parent="WebsiteInfo"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 10.0
+margin_top = 14.0
+margin_right = 207.0
+margin_bottom = 35.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.843872, 0.936555, 0.96875, 0.712706 )
+text = "Website Information"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="TextEdit" type="TextEdit" parent="WebsiteInfo"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 45.0
+margin_right = -10.0
+margin_bottom = -11.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+highlight_current_line = false
+syntax_highlighting = false
+show_line_numbers = false
+highlight_all_occurrences = false
+override_selected_font_color = false
+smooth_scrolling = false
+v_scroll_speed = 80.0
+caret_block_mode = false
+caret_blink = false
+caret_blink_speed = 0.65
+_sections_unfolded = [ "Margin", "custom_styles" ]
+
+[node name="PatientDetails" type="NinePatchRect" parent="."]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -274.0
+margin_top = -246.0
+margin_right = 267.0
+margin_bottom = 199.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+_sections_unfolded = [ "Patch Margin" ]
+
+[node name="Label" type="Label" parent="PatientDetails"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 17.0
+margin_top = 15.0
+margin_right = 156.0
+margin_bottom = 36.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.843872, 0.936555, 0.96875, 0.712706 )
+text = "Patient Details"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PatientDetails"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 20.0
+margin_top = 52.0
+margin_right = 230.0
+margin_bottom = 380.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 14
+alignment = 0
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="Forename" type="LineEdit" parent="PatientDetails/VBoxContainer"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 210.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 0, 24 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_styles/normal = SubResource( 1 )
+expand_to_len = false
+focus_mode = 2
+placeholder_text = "Forename..."
+placeholder_alpha = 0.4
+caret_blink = false
+caret_blink_speed = 0.65
+_sections_unfolded = [ "Grow Direction", "Placeholder", "Rect", "Visibility", "custom_styles" ]
+
+[node name="Surname" type="LineEdit" parent="PatientDetails/VBoxContainer"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 38.0
+margin_right = 210.0
+margin_bottom = 62.0
+rect_min_size = Vector2( 0, 24 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_styles/normal = SubResource( 1 )
+expand_to_len = false
+focus_mode = 2
+placeholder_text = "Surname..."
+placeholder_alpha = 0.4
+caret_blink = false
+caret_blink_speed = 0.65
+_sections_unfolded = [ "Grow Direction", "Placeholder", "Rect", "Visibility", "custom_colors", "custom_styles" ]
+
+[node name="PresentingComplaint" type="LineEdit" parent="PatientDetails/VBoxContainer"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 76.0
+margin_right = 210.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 24 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_styles/normal = SubResource( 1 )
+expand_to_len = false
+focus_mode = 2
+placeholder_text = "Presenting Complaint"
+placeholder_alpha = 0.4
+caret_blink = false
+caret_blink_speed = 0.65
+_sections_unfolded = [ "Grow Direction", "Placeholder", "Rect", "Visibility", "custom_styles" ]
+
+[node name="Age" type="LineEdit" parent="PatientDetails/VBoxContainer"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 114.0
+margin_right = 210.0
+margin_bottom = 138.0
+rect_min_size = Vector2( 0, 24 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_styles/normal = SubResource( 1 )
+expand_to_len = false
+focus_mode = 2
+placeholder_text = "Age"
+placeholder_alpha = 0.4
+caret_blink = false
+caret_blink_speed = 0.65
+_sections_unfolded = [ "Grow Direction", "Placeholder", "Rect", "Visibility", "custom_styles" ]
+
+[node name="Ward" type="OptionButton" parent="PatientDetails/VBoxContainer"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 152.0
+margin_right = 210.0
+margin_bottom = 176.0
+rect_min_size = Vector2( 0, 24 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_styles/normal = SubResource( 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+selected = -1
+items = [  ]
+_sections_unfolded = [ "Grow Direction", "Rect", "Visibility", "custom_styles" ]
+
+[node name="Label" type="Label" parent="PatientDetails/VBoxContainer/Ward"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.0
+margin_top = 2.0
+margin_right = -21.0
+margin_bottom = -1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_colors/font_color = Color( 0.843137, 0.933333, 0.968627, 0.408824 )
+text = "Ward"
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Visibility", "custom_colors", "custom_fonts" ]
+
+[node name="Weight" type="LineEdit" parent="PatientDetails/VBoxContainer"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 190.0
+margin_right = 210.0
+margin_bottom = 214.0
+rect_min_size = Vector2( 0, 24 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_styles/normal = SubResource( 1 )
+expand_to_len = false
+focus_mode = 2
+placeholder_text = "Weight..."
+placeholder_alpha = 0.4
+caret_blink = false
+caret_blink_speed = 0.65
+_sections_unfolded = [ "Grow Direction", "Placeholder", "Rect", "Visibility", "custom_styles" ]
+
+[node name="Height" type="LineEdit" parent="PatientDetails/VBoxContainer"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 228.0
+margin_right = 210.0
+margin_bottom = 252.0
+rect_min_size = Vector2( 0, 24 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_styles/normal = SubResource( 1 )
+expand_to_len = false
+focus_mode = 2
+placeholder_text = "Height..."
+placeholder_alpha = 0.4
+caret_blink = false
+caret_blink_speed = 0.65
+_sections_unfolded = [ "Grow Direction", "Placeholder", "Rect", "Visibility", "custom_styles" ]
+
+[node name="HospitalNumber" type="LineEdit" parent="PatientDetails/VBoxContainer"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 266.0
+margin_right = 210.0
+margin_bottom = 290.0
+rect_min_size = Vector2( 0, 24 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_styles/normal = SubResource( 1 )
+expand_to_len = false
+focus_mode = 2
+placeholder_text = "Hospital Number..."
+placeholder_alpha = 0.4
+caret_blink = false
+caret_blink_speed = 0.65
+_sections_unfolded = [ "Grow Direction", "Placeholder", "Rect", "Visibility", "custom_styles" ]
+
+[node name="Sensitivities" type="LineEdit" parent="PatientDetails/VBoxContainer"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 304.0
+margin_right = 210.0
+margin_bottom = 328.0
+rect_min_size = Vector2( 0, 24 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_styles/normal = SubResource( 1 )
+expand_to_len = false
+focus_mode = 2
+placeholder_text = "Sensitivities..."
+placeholder_alpha = 0.4
+caret_blink = false
+caret_blink_speed = 0.65
+_sections_unfolded = [ "Grow Direction", "Placeholder", "Rect", "Visibility", "custom_styles" ]
+
+[node name="Sprite" type="Sprite" parent="PatientDetails"]
+
+position = Vector2( 399.837, 224.643 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 4 )
+vframes = 2
+hframes = 3
+_sections_unfolded = [ "Animation", "Transform" ]
+
+[node name="Change" type="Button" parent="PatientDetails"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 354.0
+margin_top = 395.0
+margin_right = 445.0
+margin_bottom = 420.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Change"
+flat = false
+
+[node name="SpriteGrid" type="Container" parent="PatientDetails"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 17.0
+margin_top = 46.0
+margin_right = 250.0
+margin_bottom = 421.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PatientDetails/SpriteGrid"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -7.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+scroll_horizontal = true
+scroll_vertical = true
+_sections_unfolded = [ "Margin" ]
+
+[node name="GridContainer" type="GridContainer" parent="PatientDetails/SpriteGrid/ScrollContainer"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 233.0
+margin_bottom = 368.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Vitals" type="NinePatchRect" parent="."]
+
+editor/display_folded = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 281.0
+margin_top = -148.0
+margin_right = 542.0
+margin_bottom = 111.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+_sections_unfolded = [ "Patch Margin" ]
+
+[node name="Label" type="Label" parent="Vitals"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 16.0
+margin_top = 15.0
+margin_right = 70.0
+margin_bottom = 36.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.843872, 0.936555, 0.96875, 0.712706 )
+text = "Vitals"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Vitals"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 16.0
+margin_top = 48.0
+margin_right = 226.0
+margin_bottom = 280.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 14
+alignment = 0
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="HR" type="LineEdit" parent="Vitals/VBoxContainer"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 210.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 0, 24 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "The patients heart rate in beats per minute."
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_styles/normal = SubResource( 1 )
+expand_to_len = false
+focus_mode = 2
+placeholder_text = "Heart Rate..."
+placeholder_alpha = 0.4
+caret_blink = false
+caret_blink_speed = 0.65
+_sections_unfolded = [ "Grow Direction", "Hint", "Placeholder", "Rect", "Visibility", "custom_styles" ]
+
+[node name="RR" type="LineEdit" parent="Vitals/VBoxContainer"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 38.0
+margin_right = 210.0
+margin_bottom = 62.0
+rect_min_size = Vector2( 0, 24 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "The patients respiratory rate in breaths per minute"
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_styles/normal = SubResource( 1 )
+expand_to_len = false
+focus_mode = 2
+placeholder_text = "Resp Rate..."
+placeholder_alpha = 0.4
+caret_blink = false
+caret_blink_speed = 0.65
+_sections_unfolded = [ "Grow Direction", "Hint", "Placeholder", "Rect", "Visibility", "custom_styles" ]
+
+[node name="BP" type="HBoxContainer" parent="Vitals/VBoxContainer"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 76.0
+margin_right = 210.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 24 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Blood pressure. Systolic on the left, Diastolic on the right. "
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Grow Direction", "Hint", "Placeholder", "Rect", "Visibility", "custom_styles" ]
+
+[node name="Systolic" type="LineEdit" parent="Vitals/VBoxContainer/BP"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 103.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 0, 24 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_styles/normal = SubResource( 1 )
+expand_to_len = false
+focus_mode = 2
+placeholder_text = "BP (systol)"
+placeholder_alpha = 0.4
+caret_blink = false
+caret_blink_speed = 0.65
+_sections_unfolded = [ "Grow Direction", "Placeholder", "Rect", "Visibility", "custom_styles" ]
+
+[node name="Diastolic" type="LineEdit" parent="Vitals/VBoxContainer/BP"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 107.0
+margin_right = 210.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 0, 24 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_styles/normal = SubResource( 1 )
+expand_to_len = false
+focus_mode = 2
+placeholder_text = "BP (diastol)"
+placeholder_alpha = 0.4
+caret_blink = false
+caret_blink_speed = 0.65
+_sections_unfolded = [ "Grow Direction", "Placeholder", "Rect", "Visibility", "custom_styles" ]
+
+[node name="Sats" type="LineEdit" parent="Vitals/VBoxContainer"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 114.0
+margin_right = 210.0
+margin_bottom = 138.0
+rect_min_size = Vector2( 0, 24 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "oxygen saturations"
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_styles/normal = SubResource( 1 )
+expand_to_len = false
+focus_mode = 2
+placeholder_text = "O2 Sats..."
+placeholder_alpha = 0.4
+caret_blink = false
+caret_blink_speed = 0.65
+_sections_unfolded = [ "Grow Direction", "Hint", "Placeholder", "Rect", "Visibility", "custom_styles" ]
+
+[node name="T" type="LineEdit" parent="Vitals/VBoxContainer"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 152.0
+margin_right = 210.0
+margin_bottom = 176.0
+rect_min_size = Vector2( 0, 24 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Temperature"
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_styles/normal = SubResource( 1 )
+expand_to_len = false
+focus_mode = 2
+placeholder_text = "Temperature..."
+placeholder_alpha = 0.4
+caret_blink = false
+caret_blink_speed = 0.65
+_sections_unfolded = [ "Grow Direction", "Hint", "Placeholder", "Rect", "Visibility", "custom_styles" ]
+
+[node name="HelpNodes" type="Control" parent="."]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Mouse" ]
+
+[node name="Specialty" type="TextureRect" parent="HelpNodes"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 321.0
+margin_top = 197.0
+margin_right = 333.0
+margin_bottom = 209.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Select the specialty most associated with the condition in the scenario."
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 5 )
+stretch_mode = 0
+_sections_unfolded = [ "Focus", "Hint" ]
+
+[node name="Difficulty" type="TextureRect" parent="HelpNodes"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 321.0
+margin_top = 238.0
+margin_right = 333.0
+margin_bottom = 250.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Select the difficulty of the scenario. Junior = Easy; Registrar = Intermediate; Consultant = Hard; House = Impossible."
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 5 )
+stretch_mode = 0
+_sections_unfolded = [ "Hint" ]
+
+[node name="Priority" type="TextureRect" parent="HelpNodes"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 321.0
+margin_top = 279.0
+margin_right = 333.0
+margin_bottom = 291.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "The priority of the patient. 1: Urgent = should be seen without delay. 2: Serious = should be seen quickly, 3: Non-urgent: =Should be seen when possible. This value is used to mark the order in which the player sees patients."
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 5 )
+stretch_mode = 0
+_sections_unfolded = [ "Hint" ]
+
+[node name="Forename" type="TextureRect" parent="HelpNodes"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 605.0
+margin_top = 173.0
+margin_right = 617.0
+margin_bottom = 185.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "First name"
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 5 )
+stretch_mode = 0
+_sections_unfolded = [ "Hint" ]
+
+[node name="Surname" type="TextureRect" parent="HelpNodes"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 605.0
+margin_top = 214.0
+margin_right = 617.0
+margin_bottom = 226.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Surname"
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 5 )
+stretch_mode = 0
+_sections_unfolded = [ "Hint" ]
+
+[node name="PresentingComplaint" type="TextureRect" parent="HelpNodes"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 605.0
+margin_top = 254.0
+margin_right = 617.0
+margin_bottom = 266.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Presenting complaint of the patient. This will appear on the computer screen. "
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 5 )
+stretch_mode = 0
+_sections_unfolded = [ "Hint" ]
+
+[node name="Age" type="TextureRect" parent="HelpNodes"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 605.0
+margin_top = 297.0
+margin_right = 617.0
+margin_bottom = 309.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Age. DOB is dynamically calculated from this."
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 5 )
+stretch_mode = 0
+_sections_unfolded = [ "Hint" ]
+
+[node name="Ward" type="TextureRect" parent="HelpNodes"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 605.0
+margin_top = 337.0
+margin_right = 617.0
+margin_bottom = 349.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "What ward will the patient come in to. "
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 5 )
+stretch_mode = 0
+_sections_unfolded = [ "Hint" ]
+
+[node name="Weight" type="TextureRect" parent="HelpNodes"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 605.0
+margin_top = 379.0
+margin_right = 617.0
+margin_bottom = 391.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Weight kinilograms"
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 5 )
+stretch_mode = 0
+_sections_unfolded = [ "Hint" ]
+
+[node name="Height" type="TextureRect" parent="HelpNodes"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 605.0
+margin_top = 420.0
+margin_right = 617.0
+margin_bottom = 432.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Height in metres"
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 5 )
+stretch_mode = 0
+_sections_unfolded = [ "Hint" ]
+
+[node name="HospitalNumber" type="TextureRect" parent="HelpNodes"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 605.0
+margin_top = 461.0
+margin_right = 617.0
+margin_bottom = 473.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Pixel Hospital hospital number"
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 5 )
+stretch_mode = 0
+_sections_unfolded = [ "Hint" ]
+
+[node name="Sensitivities" type="TextureRect" parent="HelpNodes"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 605.0
+margin_top = 501.0
+margin_right = 617.0
+margin_bottom = 513.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Sensitivites to any drugs"
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 5 )
+stretch_mode = 0
+_sections_unfolded = [ "Hint" ]
+
+[node name="HR" type="TextureRect" parent="HelpNodes"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1156.0
+margin_top = 267.0
+margin_right = 1168.0
+margin_bottom = 279.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 5 )
+stretch_mode = 0
+
+[node name="RR" type="TextureRect" parent="HelpNodes"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1156.0
+margin_top = 308.0
+margin_right = 1168.0
+margin_bottom = 320.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 5 )
+stretch_mode = 0
+
+[node name="BP" type="TextureRect" parent="HelpNodes"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1156.0
+margin_top = 349.0
+margin_right = 1168.0
+margin_bottom = 361.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 5 )
+stretch_mode = 0
+
+[node name="Sats" type="TextureRect" parent="HelpNodes"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1156.0
+margin_top = 391.0
+margin_right = 1168.0
+margin_bottom = 403.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 5 )
+stretch_mode = 0
+
+[node name="Forename2" type="TextureRect" parent="HelpNodes"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1156.0
+margin_top = 432.0
+margin_right = 1168.0
+margin_bottom = 444.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 5 )
+stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+root_node = NodePath("..")
+anims/FlyIn = SubResource( 2 )
+anims/FlyOut = SubResource( 3 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+
